@@ -1,0 +1,36 @@
+//Enter any 2 numbers(of course 1st one less than 2nd one)prime numbers that lie between entered numbers obtained as outputs(composites are shown as zero )
+
+
+
+
+
+import java.util.*;
+public class one{
+         int prime(int a){
+                int count=0;
+                for(int i=2;i<a;i++){
+                        if(a%i==0)
+                                count++;
+                }
+                if(count==0)
+                        return a;
+                else
+                        return 0;
+        }
+        void listOfPrimes(int m,int n){
+                for(int j=m;j<=n;j++){
+                        int b=prime(j);
+                        System.out.println(b);
+                }
+        }
+}
+class Demo{
+        public static void main(String[] args){
+                Scanner sc = new Scanner(System.in);
+                one one = new one();
+                System.out.println("enter m and n values");
+                int m=sc.nextInt();
+                int n=sc.nextInt();
+                one.listOfPrimes(m,n);
+        }
+}
