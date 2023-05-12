@@ -1,4 +1,4 @@
-//Enter any 2 numbers(of course 1st one less than 2nd one)prime numbers that lie between entered numbers obtained as outputs(composites are shown as zero )
+//Enter any 2 numbers(of course 1st one less than 2nd one)prime numbers that lie between entered numbers obtained as outputs.
 
 
 
@@ -17,9 +17,13 @@ public class one{
                 else
                         return 0;
         }
-        void listOfPrimes(int m,int n){
+       void listOfPrimes(int m,int n){
+                System.out.println("prime numbers between"+m+" "+"and"+n+" are");
                 for(int j=m;j<=n;j++){
                         int b=prime(j);
+                        if(b==0)
+                                continue;
+                        else
                         System.out.println(b);
                 }
         }
