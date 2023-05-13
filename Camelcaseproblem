@@ -1,0 +1,29 @@
+/*camel case string is a string with union of two or more words,beginig of new word starts with capital letter
+  task is to count no of words in given camel case string
+  sample case:javaPythonAreProgrammingLanguages
+  output     :5(java ,Python,Are,Programming,Languages)*/
+  //code;
+  
+  import java.util.*;
+
+class Demo {
+     static int count(String s) {
+        String str = s.toLowerCase();
+        char[] c1 = str.toCharArray();
+        char[] c2 = s.toCharArray();
+        int count = 0;
+        for (int i = 0; i < c1.length; i++) {
+            if (c1[i] == c2[i] + 32)
+                count++;
+        }
+        return count;
+    }
+}
+public class CamelCase {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        int noOFWords = Demo.count(s);
+        System.out.println(noOFWords);
+    }
+}
